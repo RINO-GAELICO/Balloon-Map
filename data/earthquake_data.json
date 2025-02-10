@@ -1,0 +1,1282 @@
+[
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.5,
+      "place": "Fiji region",
+      "time": 1739159499953,
+      "updated": 1739161467040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pckn",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pckn&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 312,
+      "net": "us",
+      "code": "7000pckn",
+      "ids": ",us7000pckn,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 37,
+      "dmin": 4.511,
+      "rms": 0.54,
+      "gap": 94,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.5 - Fiji region"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -179.3594,
+        -21.5598,
+        602.28
+      ]
+    },
+    "id": "us7000pckn"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4,
+      "place": "28 km NE of Firá, Greece",
+      "time": 1739149200958,
+      "updated": 1739149690040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pck7",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pck7&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 246,
+      "net": "us",
+      "code": "7000pck7",
+      "ids": ",us7000pck7,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 20,
+      "dmin": 1.454,
+      "rms": 0.68,
+      "gap": 104,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.0 - 28 km NE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.6436,
+        36.6094,
+        10
+      ]
+    },
+    "id": "us7000pck7"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 5.4,
+      "place": "94 km SSE of Panguna, Papua New Guinea",
+      "time": 1739147300928,
+      "updated": 1739155858512,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pck3",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pck3&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": 5.831,
+      "alert": "green",
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 449,
+      "net": "us",
+      "code": "7000pck3",
+      "ids": ",us7000pck3,usauto7000pck3,",
+      "sources": ",us,usauto,",
+      "types": ",ground-failure,internal-moment-tensor,losspager,origin,phase-data,shakemap,",
+      "nst": 80,
+      "dmin": 4.626,
+      "rms": 0.4,
+      "gap": 32,
+      "magType": "mww",
+      "type": "earthquake",
+      "title": "M 5.4 - 94 km SSE of Panguna, Papua New Guinea"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        155.7777,
+        -7.1199,
+        10
+      ]
+    },
+    "id": "us7000pck3"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 5.4,
+      "place": "64 km WNW of Port-Vila, Vanuatu",
+      "time": 1739146563354,
+      "updated": 1739161080748,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pck0",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pck0&format=geojson",
+      "felt": 2,
+      "cdi": 3.4,
+      "mmi": 4.154,
+      "alert": "green",
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 449,
+      "net": "us",
+      "code": "7000pck0",
+      "ids": ",us7000pck0,",
+      "sources": ",us,",
+      "types": ",dyfi,losspager,origin,phase-data,shakemap,",
+      "nst": 50,
+      "dmin": 2.104,
+      "rms": 0.72,
+      "gap": 69,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 5.4 - 64 km WNW of Port-Vila, Vanuatu"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        167.763,
+        -17.493,
+        10
+      ]
+    },
+    "id": "us7000pck0"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 5.9,
+      "place": "65 km WNW of Port-Vila, Vanuatu",
+      "time": 1739146183093,
+      "updated": 1739162560757,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcjx",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcjx&format=geojson",
+      "felt": 8,
+      "cdi": 4.9,
+      "mmi": 4.319,
+      "alert": "green",
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 539,
+      "net": "us",
+      "code": "7000pcjx",
+      "ids": ",us7000pcjx,usauto7000pcjx,pt25041000,at00srfxs7,",
+      "sources": ",us,usauto,pt,at,",
+      "types": ",dyfi,internal-moment-tensor,internal-origin,losspager,moment-tensor,origin,phase-data,shakemap,",
+      "nst": 115,
+      "dmin": 2.074,
+      "rms": 0.58,
+      "gap": 39,
+      "magType": "mww",
+      "type": "earthquake",
+      "title": "M 5.9 - 65 km WNW of Port-Vila, Vanuatu"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        167.772,
+        -17.4593,
+        18
+      ]
+    },
+    "id": "us7000pcjx"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.1,
+      "place": "16 km NNE of Potosí, Nicaragua",
+      "time": 1739145370612,
+      "updated": 1739152481040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcjt",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcjt&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 259,
+      "net": "us",
+      "code": "7000pcjt",
+      "ids": ",us7000pcjt,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 14,
+      "dmin": 0.656,
+      "rms": 0.38,
+      "gap": 134,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.1 - 16 km NNE of Potosí, Nicaragua"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -85.8216,
+        11.6399,
+        10.529
+      ]
+    },
+    "id": "us7000pcjt"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "203 km NNE of Barra Patuca, Honduras",
+      "time": 1739144778548,
+      "updated": 1739150852040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcjy",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcjy&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pcjy",
+      "ids": ",us7000pcjy,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 27,
+      "dmin": 4.95,
+      "rms": 0.68,
+      "gap": 207,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 203 km NNE of Barra Patuca, Honduras"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.5517,
+        17.4936,
+        10
+      ]
+    },
+    "id": "us7000pcjy"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "122 km SW of Kýthira, Greece",
+      "time": 1739134514865,
+      "updated": 1739135530040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcja",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcja&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pcja",
+      "ids": ",us7000pcja,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 47,
+      "dmin": 1.926,
+      "rms": 0.64,
+      "gap": 138,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 122 km SW of Kýthira, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        22.1926,
+        35.2608,
+        43.73
+      ]
+    },
+    "id": "us7000pcja"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.3,
+      "place": "25 km NE of Oía, Greece",
+      "time": 1739133341753,
+      "updated": 1739134382040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcj8",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcj8&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 284,
+      "net": "us",
+      "code": "7000pcj8",
+      "ids": ",us7000pcj8,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 55,
+      "dmin": 1.447,
+      "rms": 0.69,
+      "gap": 87,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.3 - 25 km NE of Oía, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.5758,
+        36.626,
+        10
+      ]
+    },
+    "id": "us7000pcj8"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.4,
+      "place": "17 km NE of Firá, Greece",
+      "time": 1739129499901,
+      "updated": 1739131116040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcip",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcip&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 298,
+      "net": "us",
+      "code": "7000pcip",
+      "ids": ",us7000pcip,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 61,
+      "dmin": 1.359,
+      "rms": 0.57,
+      "gap": 98,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.4 - 17 km NE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.5565,
+        36.5372,
+        10
+      ]
+    },
+    "id": "us7000pcip"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.3,
+      "place": "21 km NE of Firá, Greece",
+      "time": 1739129112419,
+      "updated": 1739130750040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcin",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcin&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 284,
+      "net": "us",
+      "code": "7000pcin",
+      "ids": ",us7000pcin,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 62,
+      "dmin": 1.393,
+      "rms": 0.89,
+      "gap": 58,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.3 - 21 km NE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.6002,
+        36.5585,
+        10
+      ]
+    },
+    "id": "us7000pcin"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.6,
+      "place": "13 km NNE of Firá, Greece",
+      "time": 1739128603091,
+      "updated": 1739130349040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcij",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcij&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 326,
+      "net": "us",
+      "code": "7000pcij",
+      "ids": ",us7000pcij,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 73,
+      "dmin": 1.331,
+      "rms": 0.49,
+      "gap": 80,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.6 - 13 km NNE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.5065,
+        36.5236,
+        10
+      ]
+    },
+    "id": "us7000pcij"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 5.2,
+      "place": "28 km WSW of Amorgós, Greece",
+      "time": 1739127938592,
+      "updated": 1739150563177,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcih",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcih&format=geojson",
+      "felt": 10,
+      "cdi": 4.3,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 420,
+      "net": "us",
+      "code": "7000pcih",
+      "ids": ",us7000pcih,usauto7000pcih,",
+      "sources": ",us,usauto,",
+      "types": ",dyfi,internal-moment-tensor,moment-tensor,origin,phase-data,",
+      "nst": 97,
+      "dmin": 1.529,
+      "rms": 0.8,
+      "gap": 38,
+      "magType": "mww",
+      "type": "earthquake",
+      "title": "M 5.2 - 28 km WSW of Amorgós, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.6236,
+        36.6992,
+        10
+      ]
+    },
+    "id": "us7000pcih"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.7,
+      "place": "5 km ENE of Emporeío, Greece",
+      "time": 1739127237246,
+      "updated": 1739128746040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcid",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcid&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 340,
+      "net": "us",
+      "code": "7000pcid",
+      "ids": ",us7000pcid,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 74,
+      "dmin": 1.193,
+      "rms": 1.12,
+      "gap": 83,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.7 - 5 km ENE of Emporeío, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.5003,
+        36.3749,
+        10
+      ]
+    },
+    "id": "us7000pcid"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.3,
+      "place": "18 km NE of Firá, Greece",
+      "time": 1739126501829,
+      "updated": 1739134898040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcib",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcib&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 284,
+      "net": "us",
+      "code": "7000pcib",
+      "ids": ",us7000pcib,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 57,
+      "dmin": 1.365,
+      "rms": 0.64,
+      "gap": 65,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.3 - 18 km NE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.5896,
+        36.5316,
+        10
+      ]
+    },
+    "id": "us7000pcib"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4,
+      "place": "16 km N of Yujing, Taiwan",
+      "time": 1739122745349,
+      "updated": 1739124152040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pci6",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pci6&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 246,
+      "net": "us",
+      "code": "7000pci6",
+      "ids": ",us7000pci6,",
+      "sources": ",us,",
+      "types": ",moment-tensor,origin,phase-data,",
+      "nst": 30,
+      "dmin": 0.15,
+      "rms": 1.02,
+      "gap": 121,
+      "magType": "mwr",
+      "type": "earthquake",
+      "title": "M 4.0 - 16 km N of Yujing, Taiwan"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.4702,
+        23.2695,
+        14.582
+      ]
+    },
+    "id": "us7000pci6"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "34 km SSE of Jurm, Afghanistan",
+      "time": 1739119136481,
+      "updated": 1739120521040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pchv",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pchv&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pchv",
+      "ids": ",us7000pchv,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 36,
+      "dmin": 2.504,
+      "rms": 0.72,
+      "gap": 82,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 34 km SSE of Jurm, Afghanistan"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        70.9165,
+        36.5585,
+        209.334
+      ]
+    },
+    "id": "us7000pchv"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.7,
+      "place": "western Indian-Antarctic Ridge",
+      "time": 1739119084943,
+      "updated": 1739120177040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pchw",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pchw&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 340,
+      "net": "us",
+      "code": "7000pchw",
+      "ids": ",us7000pchw,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 28,
+      "dmin": 17.054,
+      "rms": 0.85,
+      "gap": 102,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.7 - western Indian-Antarctic Ridge"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        123.2739,
+        -49.3921,
+        10
+      ]
+    },
+    "id": "us7000pchw"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "25 km NE of Firá, Greece",
+      "time": 1739116527836,
+      "updated": 1739118979040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pchq",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pchq&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pchq",
+      "ids": ",us7000pchq,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 25,
+      "dmin": 1.41,
+      "rms": 0.92,
+      "gap": 107,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 25 km NE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.6596,
+        36.5546,
+        10
+      ]
+    },
+    "id": "us7000pchq"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "47 km ENE of Lobuche, Nepal",
+      "time": 1739114614279,
+      "updated": 1739125707040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pchl",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pchl&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pchl",
+      "ids": ",us7000pchl,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 28,
+      "dmin": 3.752,
+      "rms": 0.96,
+      "gap": 159,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 47 km ENE of Lobuche, Nepal"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        87.2609,
+        28.0903,
+        10
+      ]
+    },
+    "id": "us7000pchl"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.4,
+      "place": "21 km ENE of Firá, Greece",
+      "time": 1739114190674,
+      "updated": 1739116398040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pchj",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pchj&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 298,
+      "net": "us",
+      "code": "7000pchj",
+      "ids": ",us7000pchj,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 35,
+      "dmin": 1.368,
+      "rms": 1.09,
+      "gap": 104,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.4 - 21 km ENE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.6341,
+        36.5178,
+        10
+      ]
+    },
+    "id": "us7000pchj"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.1,
+      "place": "5 km ENE of Toba, Japan",
+      "time": 1739112162039,
+      "updated": 1739126169040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pchg",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pchg&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 259,
+      "net": "us",
+      "code": "7000pchg",
+      "ids": ",us7000pchg,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 49,
+      "dmin": 0.855,
+      "rms": 0.71,
+      "gap": 70,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.1 - 5 km ENE of Toba, Japan"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        136.8988,
+        34.5,
+        334.761
+      ]
+    },
+    "id": "us7000pchg"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 5.3,
+      "place": "98 km WNW of Kirakira, Solomon Islands",
+      "time": 1739111558050,
+      "updated": 1739130097999,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pche",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pche&format=geojson",
+      "felt": 2,
+      "cdi": 2.2,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 433,
+      "net": "us",
+      "code": "7000pche",
+      "ids": ",us7000pche,",
+      "sources": ",us,",
+      "types": ",dyfi,moment-tensor,origin,phase-data,",
+      "nst": 44,
+      "dmin": 1.318,
+      "rms": 0.67,
+      "gap": 76,
+      "magType": "mww",
+      "type": "earthquake",
+      "title": "M 5.3 - 98 km WNW of Kirakira, Solomon Islands"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        161.0796,
+        -10.145,
+        43.735
+      ]
+    },
+    "id": "us7000pche"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.6,
+      "place": "54 km E of Luganville, Vanuatu",
+      "time": 1739095123269,
+      "updated": 1739103158040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcgw",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcgw&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 326,
+      "net": "us",
+      "code": "7000pcgw",
+      "ids": ",us7000pcgw,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 45,
+      "dmin": 0.46,
+      "rms": 0.84,
+      "gap": 145,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.6 - 54 km E of Luganville, Vanuatu"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        167.6662,
+        -15.5608,
+        121.854
+      ]
+    },
+    "id": "us7000pcgw"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.8,
+      "place": "238 km NE of Barra Patuca, Honduras",
+      "time": 1739092448082,
+      "updated": 1739107481563,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcgn",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcgn&format=geojson",
+      "felt": 1,
+      "cdi": 3.4,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 355,
+      "net": "us",
+      "code": "7000pcgn",
+      "ids": ",us7000pcgn,",
+      "sources": ",us,",
+      "types": ",dyfi,origin,phase-data,",
+      "nst": 45,
+      "dmin": 5.23,
+      "rms": 0.78,
+      "gap": 105,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.8 - 238 km NE of Barra Patuca, Honduras"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -82.9818,
+        17.5492,
+        10
+      ]
+    },
+    "id": "us7000pcgn"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.4,
+      "place": "northwest of the Kuril Islands",
+      "time": 1739090167708,
+      "updated": 1739096319040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcgj",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcgj&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 298,
+      "net": "us",
+      "code": "7000pcgj",
+      "ids": ",us7000pcgj,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 56,
+      "dmin": 6.225,
+      "rms": 1.12,
+      "gap": 117,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.4 - northwest of the Kuril Islands"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        150.9164,
+        48.604,
+        272.706
+      ]
+    },
+    "id": "us7000pcgj"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.8,
+      "place": "Izu Islands, Japan region",
+      "time": 1739089938198,
+      "updated": 1739092364040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcgk",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcgk&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 354,
+      "net": "us",
+      "code": "7000pcgk",
+      "ids": ",us7000pcgk,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 51,
+      "dmin": 3.253,
+      "rms": 0.62,
+      "gap": 125,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.8 - Izu Islands, Japan region"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        142.0811,
+        30.4886,
+        10
+      ]
+    },
+    "id": "us7000pcgk"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.6,
+      "place": "232 km SW of George Town, Cayman Islands",
+      "time": 1739089288638,
+      "updated": 1739126165579,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcgc",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcgc&format=geojson",
+      "felt": 5,
+      "cdi": 3.8,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 327,
+      "net": "us",
+      "code": "7000pcgc",
+      "ids": ",us7000pcgc,",
+      "sources": ",us,",
+      "types": ",dyfi,origin,phase-data,",
+      "nst": 47,
+      "dmin": 4.952,
+      "rms": 0.84,
+      "gap": 47,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.6 - 232 km SW of George Town, Cayman Islands"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -82.6954,
+        17.6033,
+        10
+      ]
+    },
+    "id": "us7000pcgc"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "24 km NE of Firá, Greece",
+      "time": 1739088391244,
+      "updated": 1739096764040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcga",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcga&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pcga",
+      "ids": ",us7000pcga,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 22,
+      "dmin": 1.419,
+      "rms": 1.02,
+      "gap": 105,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 24 km NE of Firá, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.6324,
+        36.5754,
+        10
+      ]
+    },
+    "id": "us7000pcga"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.3,
+      "place": "111 km E of Saga, China",
+      "time": 1739086621888,
+      "updated": 1739089319040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcg9",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcg9&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 284,
+      "net": "us",
+      "code": "7000pcg9",
+      "ids": ",us7000pcg9,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 35,
+      "dmin": 1.698,
+      "rms": 0.9,
+      "gap": 83,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.3 - 111 km E of Saga, China"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        86.3687,
+        29.206,
+        10
+      ]
+    },
+    "id": "us7000pcg9"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.2,
+      "place": "28 km W of Nemuro, Japan",
+      "time": 1739084150736,
+      "updated": 1739086511040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcg1",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcg1&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 271,
+      "net": "us",
+      "code": "7000pcg1",
+      "ids": ",us7000pcg1,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 34,
+      "dmin": 2.037,
+      "rms": 0.56,
+      "gap": 142,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.2 - 28 km W of Nemuro, Japan"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        145.2259,
+        43.3664,
+        103.529
+      ]
+    },
+    "id": "us7000pcg1"
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "mag": 4.3,
+      "place": "23 km NE of Oía, Greece",
+      "time": 1739077319317,
+      "updated": 1739084226040,
+      "tz": null,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000pcfe",
+      "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000pcfe&format=geojson",
+      "felt": null,
+      "cdi": null,
+      "mmi": null,
+      "alert": null,
+      "status": "reviewed",
+      "tsunami": 0,
+      "sig": 284,
+      "net": "us",
+      "code": "7000pcfe",
+      "ids": ",us7000pcfe,",
+      "sources": ",us,",
+      "types": ",origin,phase-data,",
+      "nst": 38,
+      "dmin": 1.434,
+      "rms": 1.28,
+      "gap": 101,
+      "magType": "mb",
+      "type": "earthquake",
+      "title": "M 4.3 - 23 km NE of Oía, Greece"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        25.5453,
+        36.6225,
+        10
+      ]
+    },
+    "id": "us7000pcfe"
+  }
+]
