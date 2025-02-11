@@ -70,26 +70,32 @@ function initMap() {
             console.log("Full Track Mode:", fullTrackMode);
             fullTrackMode = !fullTrackMode;
             const toggleButton = document.getElementById("toggle-track-button");
-            const pathToggleButton =
-                document.getElementById("toggle-path-button");
-            const sliderContainer =
-                document.getElementById("slider").parentElement;
-            const playButton = document.getElementById("play-button");
-            if (fullTrackMode) {
-                toggleButton.textContent = "Show Single Position";
-                sliderContainer.style.display = "none";
-                playButton.style.display = "none";
-                pathToggleButton.style.display = "block";
-                showFullTrack();
+            if (toggleButton) {
+                toggleButton.addEventListener("click", () => {
+                    const pathToggleButton =
+                        document.getElementById("toggle-path-button");
+                    const sliderContainer =
+                        document.getElementById("slider").parentElement;
+                    const playButton = document.getElementById("play-button");
+                    if (fullTrackMode) {
+                        toggleButton.textContent = "Show Single Position";
+                        sliderContainer.style.display = "none";
+                        playButton.style.display = "none";
+                        pathToggleButton.style.display = "block";
+                        showFullTrack();
+                    } else {
+                        toggleButton.textContent = "Show Full Track";
+                        sliderContainer.style.display = "block";
+                        playButton.style.display = "block";
+                        pathToggleButton.style.display = "none";
+                        showPathAsLine = false;
+                        loadMarkersForSelectedBalloonAndHour(
+                            parseInt(document.getElementById("slider").value)
+                        );
+                    }
+                });
             } else {
-                toggleButton.textContent = "Show Full Track";
-                sliderContainer.style.display = "block";
-                playButton.style.display = "block";
-                pathToggleButton.style.display = "none";
-                showPathAsLine = false;
-                loadMarkersForSelectedBalloonAndHour(
-                    parseInt(document.getElementById("slider").value)
-                );
+                console.error("Toggle Track button not found!");
             }
         });
 
@@ -370,7 +376,8 @@ function fetchEarthquakeData(flightData) {
                 } else {
                     const noDataText = document.createElement("div");
                     noDataText.classList.add("ms-3", "text-muted");
-                    noDataText.textContent = "No balloon data available at this hour.";
+                    noDataText.textContent =
+                        "No balloon data available at this hour.";
                     listItem.appendChild(noDataText);
                 }
 
