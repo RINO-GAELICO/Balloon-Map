@@ -67,6 +67,7 @@ function initMap() {
         .getElementById("toggle-track-button")
         .addEventListener("click", () => {
             console.log("Toggle Full Track button clicked!");
+            console.log("Full Track Mode:", fullTrackMode);
             fullTrackMode = !fullTrackMode;
             const toggleButton = document.getElementById("toggle-track-button");
             const pathToggleButton =
