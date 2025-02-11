@@ -6,32 +6,39 @@ let isPlaying = false;
 let fullTrackMode = false;
 let showPathAsLine = false;
 let flightPath = null;
+let googleMapsLoaded = false; // Flag to track whether Google Maps is already loaded
 
-// Fetch API key dynamically
+// Fetch the API key dynamically and load Google Maps
 fetch("/api-key")
     .then((response) => response.json())
     .then((data) => loadGoogleMaps(data.apiKey))
     .catch((error) => console.error("Error fetching API key:", error));
 
-let googleMapsLoaded = false; // Flag to track whether Google Maps is already loaded
-
-// Load Google Maps dynamically, but only if not already loaded
+// Function to load Google Maps dynamically
 function loadGoogleMaps(apiKey) {
     if (googleMapsLoaded) {
         return; // Skip loading if Google Maps is already loaded
     }
 
+    // Create the script tag to load Google Maps API
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initializeMap`;
     script.async = true;
     script.defer = true;
+
+    // Handle errors loading the script
+    script.onerror = () => {
+        console.error("Error loading Google Maps API.");
+    };
+
+    // Append the script tag to the body
     document.body.appendChild(script);
 
     googleMapsLoaded = true; // Set the flag to true after the script is added
 }
 
 // Initialize the map
-function initMap() {
+function initializeMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 2,
         center: { lat: 0, lng: 0 },
@@ -68,34 +75,52 @@ function initMap() {
         .addEventListener("click", () => {
             console.log("Toggle Full Track button clicked!");
             console.log("Full Track Mode:", fullTrackMode);
+
+            // Only toggle fullTrackMode if it's not already in the desired state
+            const previousFullTrackMode = fullTrackMode;
             fullTrackMode = !fullTrackMode;
+
+            // Log the state change
+            console.log("Full Track Mode toggled:", fullTrackMode);
+
             const toggleButton = document.getElementById("toggle-track-button");
-            if (toggleButton) {
-                toggleButton.addEventListener("click", () => {
-                    const pathToggleButton =
-                        document.getElementById("toggle-path-button");
-                    const sliderContainer =
-                        document.getElementById("slider").parentElement;
-                    const playButton = document.getElementById("play-button");
-                    if (fullTrackMode) {
-                        toggleButton.textContent = "Show Single Position";
-                        sliderContainer.style.display = "none";
-                        playButton.style.display = "none";
-                        pathToggleButton.style.display = "block";
-                        showFullTrack();
-                    } else {
-                        toggleButton.textContent = "Show Full Track";
-                        sliderContainer.style.display = "block";
-                        playButton.style.display = "block";
-                        pathToggleButton.style.display = "none";
-                        showPathAsLine = false;
-                        loadMarkersForSelectedBalloonAndHour(
-                            parseInt(document.getElementById("slider").value)
-                        );
-                    }
-                });
+            const pathToggleButton =
+                document.getElementById("toggle-path-button");
+            const sliderContainer =
+                document.getElementById("slider").parentElement;
+            const playButton = document.getElementById("play-button");
+
+            if (fullTrackMode) {
+                toggleButton.textContent = "Show Single Position";
+                sliderContainer.style.display = "none";
+                playButton.style.display = "none";
+                pathToggleButton.style.display = "block";
+                console.log("Entering fullTrackMode");
+
+                // Call showFullTrack() only if mode has actually changed
+                if (previousFullTrackMode !== fullTrackMode) {
+                    console.log("Calling showFullTrack()...");
+                    showFullTrack();
+                }
             } else {
-                console.error("Toggle Track button not found!");
+                toggleButton.textContent = "Show Full Track";
+                sliderContainer.style.display = "block";
+                playButton.style.display = "block";
+                pathToggleButton.style.display = "none";
+                console.log("Exiting fullTrackMode");
+
+                // Call loadMarkersForSelectedBalloonAndHour only if necessary
+                const sliderValue = parseInt(
+                    document.getElementById("slider").value
+                );
+                if (previousFullTrackMode !== fullTrackMode) {
+                    console.log("Slider value:", sliderValue);
+                    console.log(
+                        "Calling loadMarkersForSelectedBalloonAndHour() with value:",
+                        sliderValue
+                    );
+                    loadMarkersForSelectedBalloonAndHour(sliderValue);
+                }
             }
         });
 
@@ -180,6 +205,7 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
 // Show all positions for selected balloon
 function showFullTrack() {
     clearMap();
+    console.log("Finished clearing map...");
 
     const balloonNumber = parseInt(
         document.getElementById("balloon-number").value
@@ -219,6 +245,8 @@ function showFullTrack() {
         }
     });
 
+    console.log("Finished loading markers...");
+
     // If path mode is enabled, draw the polyline
     if (showPathAsLine && pathCoordinates.length > 1) {
         flightPath = new google.maps.Polyline({
@@ -231,6 +259,7 @@ function showFullTrack() {
 
         flightPath.setMap(map);
     }
+    console.log("Finished loading path...");
 }
 
 // Clear markers and polylines
@@ -406,7 +435,7 @@ async function fetchAndUpdateData() {
         await fetchEarthquakeData(flightData); // Now fetch earthquakes with balloon data
 
         // Initialize map
-        initMap(); // Initialize map after fetching data
+        initializeMap(); // Initialize map after fetching data
     } catch (error) {
         console.error("Error fetching data:", error);
     }
