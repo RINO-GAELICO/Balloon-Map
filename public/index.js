@@ -40,23 +40,37 @@ function initializeMap() {
         .catch((error) => console.error("Error loading JSON:", error));
 
     // Slider event
-    document.getElementById("slider").addEventListener("input", handleSliderChange);
-    document.getElementById("balloon-number").addEventListener("input", handleBalloonNumberChange);
+    document
+        .getElementById("slider")
+        .addEventListener("input", handleSliderChange);
+    document
+        .getElementById("balloon-number")
+        .addEventListener("input", handleBalloonNumberChange);
 
     // Play button event
-    document.getElementById("play-button").addEventListener("click", () => {
-        if (isPlaying) {
-            stopPlay();
-        } else {
-            startPlay();
-        }
-    });
+    document
+        .getElementById("play-button")
+        .addEventListener("click", handlePlayButtonClick);
 
     // Toggle Full Track mode
-    document.getElementById("toggle-track-button").addEventListener("click", handleTrackButtonClick);
+    document
+        .getElementById("toggle-track-button")
+        .addEventListener("click", handleTrackButtonClick);
 
     // Toggle between markers and polyline
-    document.getElementById("toggle-path-button").addEventListener("click", togglePath);
+    document
+        .getElementById("toggle-path-button")
+        .addEventListener("click", togglePath);
+}
+
+// Handle play button click event
+function handlePlayButtonClick(e) {
+    e.preventDefault();
+    if (isPlaying) {
+        stopPlay();
+    } else {
+        startPlay();
+    }
 }
 
 // Handle slider change event
@@ -68,7 +82,10 @@ function handleSliderChange(e) {
 // Handle balloon number change event
 function handleBalloonNumberChange() {
     if (fullTrackMode) showFullTrack();
-    else loadMarkersForSelectedBalloonAndHour(parseInt(document.getElementById("slider").value));
+    else
+        loadMarkersForSelectedBalloonAndHour(
+            parseInt(document.getElementById("slider").value)
+        );
 }
 
 // Handle toggle track button click event
@@ -113,7 +130,10 @@ function toggleTrackUIState(previousFullTrackMode) {
         const sliderValue = parseInt(document.getElementById("slider").value);
         if (previousFullTrackMode !== fullTrackMode) {
             console.log("Slider value:", sliderValue);
-            console.log("Calling loadMarkersForSelectedBalloonAndHour() with value:", sliderValue);
+            console.log(
+                "Calling loadMarkersForSelectedBalloonAndHour() with value:",
+                sliderValue
+            );
             loadMarkersForSelectedBalloonAndHour(sliderValue);
         }
     }
@@ -123,8 +143,9 @@ function toggleTrackUIState(previousFullTrackMode) {
 // Toggle between markers and polyline
 function togglePath() {
     showPathAsLine = !showPathAsLine;
-    document.getElementById("toggle-path-button").textContent =
-        showPathAsLine ? "Show as Markers" : "Show as Line";
+    document.getElementById("toggle-path-button").textContent = showPathAsLine
+        ? "Show as Markers"
+        : "Show as Line";
     showFullTrack(); // Refresh view
 }
 
@@ -162,7 +183,9 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
     if (fullTrackMode) return;
     clearMap();
 
-    const balloonNumber = parseInt(document.getElementById("balloon-number").value);
+    const balloonNumber = parseInt(
+        document.getElementById("balloon-number").value
+    );
     const flightHistory = flightData.history;
 
     if (balloonNumber < 1 || balloonNumber > flightHistory[0].data.length) {
@@ -170,7 +193,9 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
         return;
     }
 
-    const hourData = flightHistory.find((entry) => entry.hoursAgo === hourIndex);
+    const hourData = flightHistory.find(
+        (entry) => entry.hoursAgo === hourIndex
+    );
     if (hourData && hourData.data.length >= balloonNumber) {
         const [lat, lng, altitude] = hourData.data[balloonNumber - 1];
         if (lat !== 0 && lng !== 0) {
@@ -181,7 +206,9 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
             });
 
             marker.addListener("click", () => {
-                alert(`Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m`);
+                alert(
+                    `Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m`
+                );
             });
 
             markers.push(marker);
@@ -194,7 +221,9 @@ function showFullTrack() {
     clearMap();
     console.log("Finished clearing map...");
 
-    const balloonNumber = parseInt(document.getElementById("balloon-number").value);
+    const balloonNumber = parseInt(
+        document.getElementById("balloon-number").value
+    );
     const flightHistory = flightData.history;
 
     if (balloonNumber < 1 || balloonNumber > flightHistory[0].data.length) {
@@ -217,7 +246,9 @@ function showFullTrack() {
                     });
 
                     marker.addListener("click", () => {
-                        alert(`Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m\nHour: ${hourData.hoursAgo}`);
+                        alert(
+                            `Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m\nHour: ${hourData.hoursAgo}`
+                        );
                     });
 
                     markers.push(marker);
@@ -426,4 +457,3 @@ setInterval(fetchAndUpdateData, 30 * 60 * 1000); // Runs every 30 minutes
 
 // Call once on page load to initialize the data and map
 fetchAndUpdateData();
-
