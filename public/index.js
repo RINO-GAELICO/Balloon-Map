@@ -45,7 +45,11 @@ function initializeMap() {
 
     // Play button event
     document.getElementById("play-button").addEventListener("click", () => {
-        isPlaying ? stopPlay() : startPlay();
+        if (isPlaying) {
+            stopPlay();
+        } else {
+            startPlay();
+        }
     });
 
     // Toggle Full Track mode
@@ -130,6 +134,7 @@ function startPlay() {
         console.error("Flight data is not loaded yet.");
         return;
     }
+    console.log("Starting play...");
 
     isPlaying = true;
     document.getElementById("play-button").textContent = "Stop";
@@ -141,11 +146,13 @@ function startPlay() {
         document.getElementById("hour-display").textContent = currentHour;
         loadMarkersForSelectedBalloonAndHour(currentHour);
     }, 500);
+    console.log("Finished starting play...");
 }
 
 // Stop Play
 function stopPlay() {
     isPlaying = false;
+    console.log("Stopping play...");
     document.getElementById("play-button").textContent = "Play";
     clearInterval(playInterval);
 }
