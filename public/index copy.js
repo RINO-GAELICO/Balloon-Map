@@ -6,10 +6,10 @@ let isPlaying = false;
 let fullTrackMode = false;
 let showPathAsLine = false;
 let flightPath = null;
-let googleMapsLoaded = false;
+let googleMapsLoaded = false; // Flag to track whether Google Maps is already loaded
 let counterClick = 0;
 
-// Fetch API key and load Google Maps
+// Fetch the API key dynamically and load Google Maps
 fetch("/api-key")
     .then((response) => response.json())
     .then((data) => loadGoogleMaps(data.apiKey))
@@ -17,14 +17,25 @@ fetch("/api-key")
 
 // Function to load Google Maps dynamically
 function loadGoogleMaps(apiKey) {
-    if (googleMapsLoaded) return;
+    if (googleMapsLoaded) {
+        return; // Skip loading if Google Maps is already loaded
+    }
+
+    // Create the script tag to load Google Maps API
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initializeMap`;
     script.async = true;
     script.defer = true;
-    script.onerror = () => console.error("Error loading Google Maps API.");
+
+    // Handle errors loading the script
+    script.onerror = () => {
+        console.error("Error loading Google Maps API.");
+    };
+
+    // Append the script tag to the body
     document.body.appendChild(script);
-    googleMapsLoaded = true;
+
+    googleMapsLoaded = true; // Set the flag to true after the script is added
 }
 
 // Initialize the map
@@ -40,8 +51,19 @@ function initializeMap() {
         .catch((error) => console.error("Error loading JSON:", error));
 
     // Slider event
-    document.getElementById("slider").addEventListener("input", handleSliderChange);
-    document.getElementById("balloon-number").addEventListener("input", handleBalloonNumberChange);
+    document.getElementById("slider").addEventListener("input", (e) => {
+        document.getElementById("hour-display").textContent = e.target.value;
+        loadMarkersForSelectedBalloonAndHour(parseInt(e.target.value));
+    });
+
+    // Balloon number input event
+    document.getElementById("balloon-number").addEventListener("input", () => {
+        if (fullTrackMode) showFullTrack();
+        else
+            loadMarkersForSelectedBalloonAndHour(
+                parseInt(document.getElementById("slider").value)
+            );
+    });
 
     // Play button event
     document.getElementById("play-button").addEventListener("click", () => {
@@ -49,82 +71,75 @@ function initializeMap() {
     });
 
     // Toggle Full Track mode
-    document.getElementById("toggle-track-button").addEventListener("click", handleTrackButtonClick);
+    document
+        .getElementById("toggle-track-button")
+        .addEventListener("click", () => {
+            counterClick++;
+            console.log("Counter Click:", counterClick);
+            console.log("Toggle Full Track button clicked!");
+            console.log("Full Track Mode:", fullTrackMode);
+
+            // Only toggle fullTrackMode if it's not already in the desired state
+            const previousFullTrackMode = fullTrackMode;
+            fullTrackMode = !fullTrackMode;
+
+            // Log the state change
+            console.log("Full Track Mode toggled:", fullTrackMode);
+
+            const toggleButton = document.getElementById("toggle-track-button");
+            const pathToggleButton =
+                document.getElementById("toggle-path-button");
+            const sliderContainer =
+                document.getElementById("slider").parentElement;
+            const playButton = document.getElementById("play-button");
+
+            if (fullTrackMode) {
+                toggleButton.textContent = "Show Single Position";
+                sliderContainer.style.display = "none";
+                playButton.style.display = "none";
+                pathToggleButton.style.display = "block";
+                console.log("Entering fullTrackMode");
+
+                // Call showFullTrack() only if mode has actually changed
+                if (previousFullTrackMode !== fullTrackMode) {
+                    console.log("Calling showFullTrack()...");
+                    showFullTrack();
+                }
+            } else {
+                toggleButton.textContent = "Show Full Track";
+                sliderContainer.style.display = "block";
+                playButton.style.display = "block";
+                pathToggleButton.style.display = "none";
+                console.log("Exiting fullTrackMode");
+
+                // Call loadMarkersForSelectedBalloonAndHour only if necessary
+                const sliderValue = parseInt(
+                    document.getElementById("slider").value
+                );
+                if (previousFullTrackMode !== fullTrackMode) {
+                    console.log("Slider value:", sliderValue);
+                    console.log(
+                        "Calling loadMarkersForSelectedBalloonAndHour() with value:",
+                        sliderValue
+                    );
+                    loadMarkersForSelectedBalloonAndHour(sliderValue);
+                }
+            }
+            console.log("Finished toggle-track-button event...");
+        });
 
     // Toggle between markers and polyline
-    document.getElementById("toggle-path-button").addEventListener("click", togglePath);
+    document
+        .getElementById("toggle-path-button")
+        .addEventListener("click", () => {
+            showPathAsLine = !showPathAsLine;
+            document.getElementById("toggle-path-button").textContent =
+                showPathAsLine ? "Show as Markers" : "Show as Line";
+            showFullTrack(); // Refresh view
+        });
 }
 
-// Handle slider change event
-function handleSliderChange(e) {
-    document.getElementById("hour-display").textContent = e.target.value;
-    loadMarkersForSelectedBalloonAndHour(parseInt(e.target.value));
-}
-
-// Handle balloon number change event
-function handleBalloonNumberChange() {
-    if (fullTrackMode) showFullTrack();
-    else loadMarkersForSelectedBalloonAndHour(parseInt(document.getElementById("slider").value));
-}
-
-// Handle toggle track button click event
-function handleTrackButtonClick() {
-    counterClick++;
-    console.log("Counter Click:", counterClick);
-    console.log("Toggle Full Track button clicked!");
-    console.log("Full Track Mode:", fullTrackMode);
-
-    const previousFullTrackMode = fullTrackMode;
-    fullTrackMode = !fullTrackMode;
-    console.log("Full Track Mode toggled:", fullTrackMode);
-
-    toggleTrackUIState(previousFullTrackMode);
-}
-
-// Toggle track mode UI
-function toggleTrackUIState(previousFullTrackMode) {
-    const toggleButton = document.getElementById("toggle-track-button");
-    const pathToggleButton = document.getElementById("toggle-path-button");
-    const sliderContainer = document.getElementById("slider").parentElement;
-    const playButton = document.getElementById("play-button");
-
-    if (fullTrackMode) {
-        toggleButton.textContent = "Show Single Position";
-        sliderContainer.style.display = "none";
-        playButton.style.display = "none";
-        pathToggleButton.style.display = "block";
-        console.log("Entering fullTrackMode");
-
-        if (previousFullTrackMode !== fullTrackMode) {
-            console.log("Calling showFullTrack()...");
-            showFullTrack();
-        }
-    } else {
-        toggleButton.textContent = "Show Full Track";
-        sliderContainer.style.display = "block";
-        playButton.style.display = "block";
-        pathToggleButton.style.display = "none";
-        console.log("Exiting fullTrackMode");
-
-        const sliderValue = parseInt(document.getElementById("slider").value);
-        if (previousFullTrackMode !== fullTrackMode) {
-            console.log("Slider value:", sliderValue);
-            console.log("Calling loadMarkersForSelectedBalloonAndHour() with value:", sliderValue);
-            loadMarkersForSelectedBalloonAndHour(sliderValue);
-        }
-    }
-    console.log("Finished toggle-track-button event...");
-}
-
-// Toggle between markers and polyline
-function togglePath() {
-    showPathAsLine = !showPathAsLine;
-    document.getElementById("toggle-path-button").textContent =
-        showPathAsLine ? "Show as Markers" : "Show as Line";
-    showFullTrack(); // Refresh view
-}
-
-// Start Play
+// Play slider animation
 function startPlay() {
     if (!flightData.history || flightData.history.length === 0) {
         console.error("Flight data is not loaded yet.");
@@ -137,13 +152,15 @@ function startPlay() {
     playInterval = setInterval(() => {
         let currentHour = parseInt(document.getElementById("slider").value);
         currentHour = (currentHour + 1) % 24;
+
         document.getElementById("slider").value = currentHour;
         document.getElementById("hour-display").textContent = currentHour;
+
         loadMarkersForSelectedBalloonAndHour(currentHour);
     }, 500);
 }
 
-// Stop Play
+// Stop slider animation
 function stopPlay() {
     isPlaying = false;
     document.getElementById("play-button").textContent = "Play";
@@ -155,7 +172,9 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
     if (fullTrackMode) return;
     clearMap();
 
-    const balloonNumber = parseInt(document.getElementById("balloon-number").value);
+    const balloonNumber = parseInt(
+        document.getElementById("balloon-number").value
+    );
     const flightHistory = flightData.history;
 
     if (balloonNumber < 1 || balloonNumber > flightHistory[0].data.length) {
@@ -163,9 +182,12 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
         return;
     }
 
-    const hourData = flightHistory.find((entry) => entry.hoursAgo === hourIndex);
+    const hourData = flightHistory.find(
+        (entry) => entry.hoursAgo === hourIndex
+    );
     if (hourData && hourData.data.length >= balloonNumber) {
         const [lat, lng, altitude] = hourData.data[balloonNumber - 1];
+
         if (lat !== 0 && lng !== 0) {
             const marker = new google.maps.Marker({
                 position: { lat, lng },
@@ -174,7 +196,9 @@ function loadMarkersForSelectedBalloonAndHour(hourIndex) {
             });
 
             marker.addListener("click", () => {
-                alert(`Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m`);
+                alert(
+                    `Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m`
+                );
             });
 
             markers.push(marker);
@@ -187,7 +211,9 @@ function showFullTrack() {
     clearMap();
     console.log("Finished clearing map...");
 
-    const balloonNumber = parseInt(document.getElementById("balloon-number").value);
+    const balloonNumber = parseInt(
+        document.getElementById("balloon-number").value
+    );
     const flightHistory = flightData.history;
 
     if (balloonNumber < 1 || balloonNumber > flightHistory[0].data.length) {
@@ -196,9 +222,11 @@ function showFullTrack() {
     }
 
     const pathCoordinates = [];
+
     flightHistory.forEach((hourData) => {
         if (hourData.data.length >= balloonNumber) {
             const [lat, lng, altitude] = hourData.data[balloonNumber - 1];
+
             if (lat !== 0 && lng !== 0) {
                 pathCoordinates.push({ lat, lng });
 
@@ -210,7 +238,9 @@ function showFullTrack() {
                     });
 
                     marker.addListener("click", () => {
-                        alert(`Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m\nHour: ${hourData.hoursAgo}`);
+                        alert(
+                            `Balloon ${balloonNumber}\nLatitude: ${lat}\nLongitude: ${lng}\nAltitude: ${altitude}m\nHour: ${hourData.hoursAgo}`
+                        );
                     });
 
                     markers.push(marker);
@@ -221,6 +251,7 @@ function showFullTrack() {
 
     console.log("Finished loading markers...");
 
+    // If path mode is enabled, draw the polyline
     if (showPathAsLine && pathCoordinates.length > 1) {
         flightPath = new google.maps.Polyline({
             path: pathCoordinates,
@@ -419,4 +450,3 @@ setInterval(fetchAndUpdateData, 30 * 60 * 1000); // Runs every 30 minutes
 
 // Call once on page load to initialize the data and map
 fetchAndUpdateData();
-
