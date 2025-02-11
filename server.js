@@ -9,7 +9,8 @@ import { config } from "dotenv";
 config(); // Loads environment variables
 
 const app = express();
-const port = 3000;
+
+const port = process.env.PORT || 3000;
 
 // Use import.meta.url to get the directory name
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
@@ -139,7 +140,7 @@ cron.schedule("*/30 * * * *", fetchFullFlightHistory); // Runs every 30 minutes
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
 
 // Initial call to populate data on server start

@@ -1,12 +1,19 @@
 {
-  "type": "module",
+  "name": "balloon-map",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type":"module",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-cron": "^3.0.0",
     "node-fetch": "^3.0.0"
   },
-  "homepage": "https://RINO_GAELICO.github.io/Balloon-Map",
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
